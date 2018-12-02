@@ -1,0 +1,29 @@
+{
+  "name": "enp-162",
+  "version": "0.3.0",
+  "engines": {
+    "node": "10.x",
+    "npm": "latest",
+    "hogan": "latest"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "body-parser": "latest",
+    "consolidate": "latest",
+    "exif-js": "^2.2.1",
+    "express": "^4.16.4",
+    "foobar": "^1.1.0",
+    "fs": "latest",
+    "hogan": "latest",
+    "mongodb": "latest",
+    "validator": "latest"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ]
+}
