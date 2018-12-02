@@ -14,6 +14,8 @@ app.set('project',__dirname)
 app.use(express.static(__dirname))
 app.set('port', (process.env.PORT || 5000))
 
+console.log ("here")
+
 app.get('/', function(request, response){
         response.render('index');
 })
@@ -21,3 +23,7 @@ app.get('/', function(request, response){
 app.get('/GIS', function(request, response){
         response.render('GIS');
 })
+
+app.listen(app.get('port'),function(){
+        console.log('Node app is running on port', app.get('port'));
+});
