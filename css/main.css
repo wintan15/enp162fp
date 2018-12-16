@@ -55,7 +55,7 @@ padding-top: 12%;
    
 }
 .content .maps, .time{
-  width:  45%;
+  width:  47%;
   display: inline-block; 
 }
 
@@ -67,7 +67,7 @@ padding-top: 12%;
 .content .time{
 float: right;
 margin: 0 auto;
-padding: 50px 0 0 0px;
+padding: 20px 0 0 0px;
 
 }
 
