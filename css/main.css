@@ -1,0 +1,158 @@
+@charset "utf-8";
+body, html{ background-size: 100% 100%;
+font-family: 'economica';}
+
+.header{
+  background-image: url("../image/main.jpg");
+  background-size: cover;
+  height: 100vh;
+  width:  100%;
+
+
+}
+.header ul {
+  overflow:   hidden;
+  margin-right:   40px;
+  display:  block;  
+}
+.header ul li{
+  display:  inline-block; 
+  float:  right;
+  color:  #fff;
+  font-size:  20px;
+  margin-right:   20px;
+  cursor:   pointer;  
+  margin-top:   20px;
+}
+.header a{
+  display:  block;  
+
+}
+.header a img{
+  display:  block; 
+ padding-top: 15%;
+ margin:0 auto;  
+}
+.header span{
+  
+}
+.header span img{
+display:  block;  
+  margin:0 auto;
+padding-top: 12%;
+}
+
+
+.quote{
+  font-family: 'economica';
+  font-size:50px;
+  color:#454545;
+  text-align: center;
+  padding: 150px;
+  background-color:#ffead1;
+}
+.content  {
+   
+}
+.content .maps, .time{
+  width:  45%;
+  display: inline-block; 
+}
+
+.content .maps iframe{
+  width:100%;
+  height:100vh;
+} 
+
+.content .time{
+float: right;
+margin: 0 auto;
+padding: 50px 0 0 0px;
+
+}
+
+.content .time h2{
+  font-size: 50px;
+  font-family: 'economica';
+  margin-bottom:  30px;
+  color: #454545;
+}
+.content .time h3{
+  font-size: 30px;
+  font-family: 'economica';
+  margin-bottom: 20px; 
+  font-weight: bold;
+  color: #454545;
+}
+
+.content .time .selects select{
+  width: 200px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+
+
+.content .time ul{
+  margin-top:2px;
+}
+
+
+.content .time li {
+  font-size: 20px;
+  margin-top:20px;
+  margin-bottom: 20px;
+  color: #454545;
+
+}
+.button {
+  font-family: 'economica';
+  background-color: #cca677;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 35px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#rec{
+   font-family: 'economica';
+  display: none;
+  width: 100%;
+  height:100vh;
+  text-align:center;
+  padding-top: 30px;
+   background-color: #cca677;
+
+}
+
+#rec span{
+  font-size:80px;
+  color: #fff;
+}
+#rec div h5{
+  margin-top:30px;
+  font-size:40px;
+}
+#rec div{
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+  font-size:30px;
+  color:#fff;
+  line-height: 150%;
+  margin-bottom: 50px;
+}
+
+#rec div p {
+  text-align: left;
+  margin-left:70px;
+  padding-top:30px;
+}
+#rec iframe{
+  width: 100%;
+}
