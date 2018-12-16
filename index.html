@@ -42,7 +42,7 @@
 				lux.value = "40";
 				break;
 			case 4://Singing
-				ld.value = "30";
+				ld.value = "50";
 				qlty.value = "60";
 				crwd.value = "60";
 				lux.value = "40";
@@ -129,7 +129,8 @@
 		<!--content(e)-->
 		<div id="rec">
 			 <span> Recommendation: </span>
-			 <div id = "place"><h5>-Tisch Library B1 -</h5>
+			 <div><h5 id = "place">-Tisch Library B1 -</h5>
+			 	<h4 id = "tod"> Morning </h4>
 			 <p id = "description">
 			 Good lighting (lightness level between 65 - 75)<br>
 			 Small Crowd at this time (3pm - 6pm)<br>
@@ -215,8 +216,9 @@
 	  		loca.push(value);
 	  	}
 	  	index = minIndex(loca);
-	  	var location = index / 5;
+	  	var location = Math.floor(index / 5);
 	  	var tod = index % 5;
+	  	console.log(location);
 	  } else {
 	  	var tod = time.selectedIndex - 1;
 	  	var index;
@@ -233,7 +235,65 @@
 	  	}
 	  	var location = minIndex (loca);
 	  }
-	  console.log(arrval);
+	  switch (location){
+	  	case 0:
+	  		document.getElementById("place").textContent = "574 Boston Avenue Entrance";
+	  		break;
+	  	case 1:
+	  		document.getElementById("place").textContent = "574 Boston Avenue 4th Floor";
+	  		break;
+	  	case 2:
+
+	  		document.getElementById("place").textContent = "Tisch Library Basement";
+	  		break;
+	  	case 3:
+
+	  		document.getElementById("place").textContent = "Tisch Library First Floor";
+	  		break;
+	  	case 4:
+	  		document.getElementById("place").textContent = "Campus Center The Commons";
+	  		break;
+	  	case 5: 
+	  		document.getElementById("place").textContent = "Campus Center The Rez";
+	  		break;
+	  	case 6:
+	  		document.getElementById("place").textContent = "Lilly Music Library";
+	  		break;
+	  	case 7:
+	  		document.getElementById("place").textContent = "Kindlevan Cafe at SEC";
+	  		break;
+	  	case 8: 
+	  		document.getElementById("place").textContent = "Science and Engineering Complex 2nd Floor";
+	  		break;
+	  	case 9:
+	  		document.getElementById("place").textContent = "Engineering Project Development Center";
+	  		break;
+	  	case 10:
+	  		document.getElementById("place").textContent = "Eaton Computer Laboratory";
+
+	  }
+	  switch (tod){
+	  	case 0:
+	  		document.getElementById("tod").textContent = "Morning";
+	  		break;
+	  	case 1:
+	  		document.getElementById("tod").textContent = "Lunch";
+	  		break;
+	  	case 2:
+
+	  		document.getElementById("tod").textContent = "Afternoon";
+	  		break;
+	  	case 3:
+
+	  		document.getElementById("tod").textContent = "Evening";
+	  		break;
+	  	case 4:
+	  		document.getElementById("tod").textContent = "Night";
+	  		break;
+
+	  }
+
+		//BOS5741: 0, BOS5744: 1, TLIBB: 2, TLIB1: 3, CC1: 4, CC2: 5, LML: 6, SEC1: 7, SEC2: 8, EPDC: 9, ECL: 10
 
 	  document.getElementById("rec").style.display = "block";
 
