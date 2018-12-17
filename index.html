@@ -136,7 +136,7 @@
 			 Small Crowd at this time (3pm - 6pm)<br>
 			</p>
 			</div>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11784.04527380905!2d-71.118877!3d42.406204!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x46a463527f2c5835!2sTisch+Library!5e0!3m2!1sen!2sus!4v1544814873325" style="height: 360px;" >
+			<iframe id="rec-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11784.04527380905!2d-71.118877!3d42.406204!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x46a463527f2c5835!2sTisch+Library!5e0!3m2!1sen!2sus!4v1544814873325" style="height: 360px;" >
 			</iframe>
 		</div>
 
@@ -237,40 +237,51 @@
 	  }
 	  switch (location){
 	  	case 0:
-	  		document.getElementById("place").textContent = "574 Boston Avenue Entrance";
+	  		document.getElementById("place").textContent = "574 Boston Avenue Entrance";	  		
+	  		document.getElementById("rec-map").src="https://maps.google.com/maps?q=574%20Boston%20Ave&t=&z=16&ie=UTF8&iwloc=&output=embed";
 	  		break;
 	  	case 1:
 	  		document.getElementById("place").textContent = "574 Boston Avenue 4th Floor";
+	  		document.getElementById("rec-map").src="https://maps.google.com/maps?q=574%20Boston%20Ave&t=&z=16&ie=UTF8&iwloc=&output=embed";
 	  		break;
 	  	case 2:
 
 	  		document.getElementById("place").textContent = "Tisch Library Basement";
+	  		document.getElementById("rec-map").src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11784.04527380905!2d-71.118877!3d42.406204!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x46a463527f2c5835!2sTisch+Library!5e0!3m2!1sen!2sus!4v1544814873325";
 	  		break;
 	  	case 3:
 
 	  		document.getElementById("place").textContent = "Tisch Library First Floor";
+	  		document.getElementById("rec-map").src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11784.04527380905!2d-71.118877!3d42.406204!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x46a463527f2c5835!2sTisch+Library!5e0!3m2!1sen!2sus!4v1544814873325";
 	  		break;
+	  		
 	  	case 4:
 	  		document.getElementById("place").textContent = "Campus Center The Commons";
+	  		document.getElementById("rec-map").src="https://maps.google.com/maps?q=Mayer%20Campus%20Center%2C%20Professors%20Row%2C%20Medford%2C%20MA&t=&z=16&ie=UTF8&iwloc=&output=embed";
 	  		break;
 	  	case 5: 
 	  		document.getElementById("place").textContent = "Campus Center The Rez";
+	  		document.getElementById("rec-map").src="https://maps.google.com/maps?q=Mayer%20Campus%20Center%2C%20Professors%20Row%2C%20Medford%2C%20MA&t=&z=16&ie=UTF8&iwloc=&output=embed";
 	  		break;
 	  	case 6:
 	  		document.getElementById("place").textContent = "Lilly Music Library";
+	  		document.getElementById("rec-map").src="https://maps.google.com/maps?q=Granoff%20Music%20Center%2C%20Talbot%20Avenue%2C%20Medford%2C%20MA&t=&z=16&ie=UTF8&iwloc=&output=embed";
 	  		break;
 	  	case 7:
 	  		document.getElementById("place").textContent = "Kindlevan Cafe at SEC";
+	  		document.getElementById("rec-map").src="https://maps.google.com/maps?q=Anderson%20Hall%2C%20200%20College%20Ave%20College%20Ave%2C%20Medford%2C%20MA%2002155&t=&z=16&ie=UTF8&iwloc=&output=embed";
 	  		break;
 	  	case 8: 
 	  		document.getElementById("place").textContent = "Science and Engineering Complex 2nd Floor";
+	  		document.getElementById("rec-map").src="https://maps.google.com/maps?q=Anderson%20Hall%2C%20200%20College%20Ave%20College%20Ave%2C%20Medford%2C%20MA%2002155&t=&z=16&ie=UTF8&iwloc=&output=embed";
 	  		break;
 	  	case 9:
-	  		document.getElementById("place").textContent = "Engineering Project Development Center";
+	  		document.getElementById("place").textContent = "Engineering Project Development Center";	
+	  		document.getElementById("rec-map").src="https://maps.google.com/maps?q=Anderson%20Hall%2C%20200%20College%20Ave%20College%20Ave%2C%20Medford%2C%20MA%2002155&t=&z=16&ie=UTF8&iwloc=&output=embed";
 	  		break;
 	  	case 10:
 	  		document.getElementById("place").textContent = "Eaton Computer Laboratory";
-
+	  		document.getElementById("rec-map").src="https://maps.google.com/maps?q=Eaton%20Hall%205%20The%20Green%20Medford%2C%20MA%2002155&t=&z=16&ie=UTF8&iwloc=&output=embed";
 	  }
 	  switch (tod){
 	  	case 0:
@@ -280,7 +291,6 @@
 	  		document.getElementById("tod").textContent = "Lunch";
 	  		break;
 	  	case 2:
-
 	  		document.getElementById("tod").textContent = "Afternoon";
 	  		break;
 	  	case 3:
@@ -289,7 +299,6 @@
 	  		break;
 	  	case 4:
 	  		document.getElementById("tod").textContent = "Night";
-	  		break;
 
 	  }
 
