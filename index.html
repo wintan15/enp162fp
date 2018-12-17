@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
 <html>
  <head>
   <title> New Document </title>
@@ -8,7 +8,7 @@
   <meta name="Keywords" content="">
   <meta name="Description" content="">
     <link rel="stylesheet" href="css/reset.css" type="text/css">
-<link href='http://fonts.googleapis.com/css?family=Economica:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Economica:300' rel='stylesheet' type='text/css'>
 <script type ="text/javascript">
 	function enable(){
 		var options = document.getElementById("presets").selectedIndex;
@@ -132,8 +132,6 @@
 			 <div><h5 id = "place">-Tisch Library B1 -</h5>
 			 	<h4 id = "tod"> Morning </h4>
 			 <p id = "description">
-			 Good lighting (lightness level between 65 - 75)<br>
-			 Small Crowd at this time (3pm - 6pm)<br>
 			</p>
 			</div>
 			<iframe id="rec-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11784.04527380905!2d-71.118877!3d42.406204!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x46a463527f2c5835!2sTisch+Library!5e0!3m2!1sen!2sus!4v1544814873325" style="height: 360px;" >
@@ -199,12 +197,12 @@
 	  var crwd = document.getElementById("crowd");
 	  var lux = document.getElementById("brightness");
 	  var time = document.getElementById("time");
+	  var index;
 	  var arrval = [];
 	  if (checkstrint (ld.value, arrval) || checkstrint(qlty.value, arrval) || checkstrint (lux.value, arrval) || checkstrint(crwd.value, arrval) || (arrval.every(function (x){return x == -1;}))){
 	  	return;
 	  }
 	  if (time.selectedIndex == 0){
-	  	var index;
 	  	var loca = [];
 	  	var value = 0;
 	  	for (i = 0; i < 55; i++){
@@ -221,7 +219,6 @@
 	  	console.log(location);
 	  } else {
 	  	var tod = time.selectedIndex - 1;
-	  	var index;
 	  	var loca = [];
 	  	var value = 0;
 	  	for (i = 0; i < 11; i++){
@@ -301,6 +298,29 @@
 	  		document.getElementById("tod").textContent = "Night";
 
 	  }
+	  var descriptionstr = "";
+	  if (loudness[index] < 25){
+	  	descriptionstr+= "- Low ambient noise <br>";
+	  } else if (loudness[index] > 75){	  	
+	  	descriptionstr+= "- Loud noises at this time. <br>";
+	  } 
+	  if (qlty[index] < 65){
+	  	descriptionstr+= "- High air quality<br>";
+	  } else if (qlty[index] > 85){	  	
+	  	descriptionstr+= "- Low air quality in the area<br>";
+	  }
+	  if (light[index] < 25){
+	  	descriptionstr+= "- Dim lighting<br>";
+	  } else if (light[index] > 75){
+	  	descriptionstr+= "- Extremely bright at this time<br>";
+	  }
+	  if (crowd[index] < 25) {
+	  	descriptionstr+= "- Quite empty";
+	  } else if (crowd[index] > 75){
+	  	descriptionstr+= "- Large Crowds";
+	  }
+	  document.getElementById("description").innerHTML = descriptionstr;
+
 
 		//BOS5741: 0, BOS5744: 1, TLIBB: 2, TLIB1: 3, CC1: 4, CC2: 5, LML: 6, SEC1: 7, SEC2: 8, EPDC: 9, ECL: 10
 
